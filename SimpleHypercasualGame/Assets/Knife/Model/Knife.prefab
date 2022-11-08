@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: 205364086537979158}
   - component: {fileID: -2466443725175789633}
   - component: {fileID: 1122016021286550145}
+  - component: {fileID: -6910922724763127386}
   m_Layer: 0
   m_Name: Knife
   m_TagString: Untagged
@@ -193,9 +194,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1196845172897766}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4408011965861364}
@@ -204,7 +205,7 @@ Transform:
   - {fileID: 4181197319725836}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!23 &23894503687208690
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -308,6 +309,19 @@ CapsuleCollider:
   m_Height: 0.07768816
   m_Direction: 1
   m_Center: {x: 0.012430552, y: -0.012279952, z: -0.00571124}
+--- !u!114 &-6910922724763127386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196845172897766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51e49bdb7e10de04ab1dfcd47037ec0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knifeHandPosition: {fileID: 3992571027198076032, guid: 8dece88b07339b54b8440841b13fcb50, type: 3}
 --- !u!1 &1551345282138878
 GameObject:
   m_ObjectHideFlags: 0

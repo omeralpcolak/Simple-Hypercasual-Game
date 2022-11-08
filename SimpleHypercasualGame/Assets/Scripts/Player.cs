@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     public Controller controller;
 
     public float slideSpeed = 1;
-    public float speed = 1f;
+    public float speed = 10f;
 
     public float xLimit = 2;
 
@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
             return;
         }
 
-        transform.Translate(slideSpeed * controller.moveX * Time.deltaTime, 0, -(Time.deltaTime *2* speed));
+        transform.Translate(slideSpeed * controller.moveX * Time.deltaTime, 0, -(Time.deltaTime *10* speed));
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, -xLimit, xLimit), transform.position.y, transform.position.z);
     }
 }

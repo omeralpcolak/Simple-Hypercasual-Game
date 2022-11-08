@@ -9,6 +9,13 @@ public class Controller : MonoBehaviour
 
     public RectTransform positioner;
     private float prevPosX = 0f;
+    public GameObject knife;
+
+    private void Start()
+    {
+        Vector3 knifePos = new Vector3(Random.Range(-2f, 2f), 1.56f, Random.Range(30f, 60f));
+        Instantiate(knife, knifePos,Quaternion.Euler(0,90,0));
+    }
 
     public void onControllerPressDown(BaseEventData _e)
     {

@@ -1,32 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
+
+
 
 public class Knife : MonoBehaviour
 {
     public GameObject knifeHandPosition;
     private float speed = 50f;
-    public bool knifePickedUp = true;
+    
+    //public bool knifePickedUp = true;
 
-    private void Start()
-    {   
-        
-        //KnifeThrow();
-    }
+
+
+    
+
 
     void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<Player>() != null)
         {
-            knifePickedUp = true;
+            /*knifePickedUp = true;
             transform.position = knifeHandPosition.transform.position;
-            //this.GetComponent<Rigidbody>().AddForce(Vector3.forward * 20f * speed);
-            
+            //this.GetComponent<Rigidbody>().AddForce(Vector3.forward * 20f * speed);*/
+            transform.DOMove(knifeHandPosition.transform.position,0f).OnComplete(delegate
+            {
+                this.GetComponent<Rigidbody>().AddForce(Vector3.forward * 30f * speed);
+                //Destroy(gameObject,1f);
+            });
+
         }
     }
 
 
-    private void Update()
+    /*private void Update()
     {
         if (knifePickedUp == true)
         {
